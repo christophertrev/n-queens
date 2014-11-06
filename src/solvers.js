@@ -32,10 +32,8 @@ window.findNRooksSolution = function(n) {
       }
     }
   };
-
   placePiece(0);
   var solution = board.rows();
-
   console.log('Single solution for ' + n + ' rooks:', JSON.stringify(solution));
   return solution;
 };
@@ -62,7 +60,7 @@ window.countNRooksSolutions = function(n) {
       if (board.get(row)[col]) {
        board.togglePiece(row, col);
       }
-    } //end for
+    }
   };
   placePiece(0);
   console.log('Number of solutions for ' + n + ' rooks:', solutionCount);
@@ -99,9 +97,8 @@ window.findNQueensSolution = function(n) {
       }
     }
   };
-
   placePiece(0);
-    var solution = board.rows();
+  var solution = board.rows();
   console.log('Single solution for ' + n + ' queens:', JSON.stringify(solution));
   return solution;
 };

@@ -26,3 +26,11 @@ var countNQueensSolutionsWithBits= function(n){
   return arr;
 };
 
+
+
+onmessage = function(event) {
+  var num = Number(event.data);
+  postMessage(countNQueensSolutionsWithBits(num));
+};
+
+

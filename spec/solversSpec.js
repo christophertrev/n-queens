@@ -67,7 +67,6 @@ describe('solvers', function() {
   });
 
   describe('countNQueensSolutions()', function() {
-
     it('finds the number of valid solutions for n of 0-8', function() {
       _.range(0, 9).map(function(n) {
         var solutionCount = countNQueensSolutions(n);
@@ -90,4 +89,25 @@ describe('solvers', function() {
 
   });
 
+
+  // describe('workers countNQueensSolutionsWithBits()', function() {
+
+  //   it('uses workers to find the number of valid solutions for n of 1-12', function() {
+  //     var workArr = [];
+  //     for (var i = 0; i < 8; i++) {
+  //       var worker = new Worker('src/worker.js','src/bitwiseSolver.js');
+  //       workArr.push(worker);
+  //       worker.onmessage = function(ev) {
+  //       console.log('worker ' + i +':' + ev.data);
+  //       };
+
+  //       worker.postMessage(i);
+  //     }
+
+  //       // var solutionArr = countNQueensSolutionsWithBits(12);
+  //       // var expectedSolutionCount = [1, 0, 0, 2, 10, 4, 40, 92, 352, 724,2680,14200];
+  //       // expect(solutionArr).eql(expectedSolutionCount);
+  //   });
+
+  // });
 });
