@@ -79,4 +79,15 @@ describe('solvers', function() {
 
   });
 
+
+  describe('countNQueensSolutionsWithBits()', function() {
+
+    it('finds the number of valid solutions for n of 1-12', function() {
+        var solutionArr = countNQueensSolutionsWithBits(12);
+        var expectedSolutionCount = [1, 0, 0, 2, 10, 4, 40, 92, 352, 724,2680,14200];
+        expect(solutionArr).eql(expectedSolutionCount);
+    });
+
+  });
+
 });
